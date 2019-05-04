@@ -1,0 +1,256 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="OfrDisign.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - OFR INDIA</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Logo 1.png" Height="50px" Width="50px" ImageAlign="Left" Style="margin-top:10px; margin-left:10px" PostBackUrl="~/Default.aspx" />
+                    <a class="navbar-brand" runat="server" href="~/">OFR INDIA</a>
+                  
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/About">About</a></li>
+                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li><a runat="server" href="~/Services">Services</a></li>
+                        <li><a runat="server" href="~/Carrers">Carrers</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="btn-group navbar-right"  style="float: right; margin-top: 10px">
+                    <a href="#" class="btn btn-warning">Choose Your Language</a>
+                    <a href="#" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Default.aspx">English</a></li>
+                        <li><a href="Hindhi/HindhiHome.aspx">हिंदी</a></li>
+                        <li><a href="Kannada/KannadaHome.aspx">ಕನ್ನಡ</a></li>
+                        <li><a href="Telugu/TeluguHome.aspx">తెలుగు</a></li>
+                        <li><a href="Tamil/TamilHome.aspx">தமிழ்</a></li>
+                        <li><a href="Malayalam/MalayalamHome.aspx">മലയാളം</a></li>
+                        <li><a href="Gujarathi/GujarathiHome.aspx">ગુજરાતી</a></li>
+                        <li><a href="Bengali/BengaliHome.aspx">বাঙালি</a></li>
+                        <li><a href="Marathi/MarathiHome.aspx">मराठी</a></li>
+                        <li class="divider"></li>
+                        <li><a href="Default.aspx">Default English</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                <style>
+                    .fa {
+                        padding: 10px;
+                        font-size: 15px;
+                        width: 30px;
+                        text-align: center;
+                        text-decoration: none;
+                        margin: 5px 2px;
+                        border-radius: 50%;
+                    }
+
+                        .fa:hover {
+                            opacity: 0.7;
+                        }
+
+                    .fa-facebook {
+                        background: #3B5998;
+                        color: white;
+                    }
+
+                    .fa-twitter {
+                        background: #55ACEE;
+                        color: white;
+                    }
+
+                    .fa-google {
+                        background: #dd4b39;
+                        color: white;
+                    }
+
+                    .fa-linkedin {
+                        background: #007bb5;
+                        color: white;
+                    }
+
+                    .fa-youtube {
+                        background: #bb0000;
+                        color: white;
+                    }
+
+                    .fa-instagram {
+                        background: #125688;
+                        color: white;
+                    }
+
+                    .fa-pinterest {
+                        background: #cb2027;
+                        color: white;
+                    }
+
+                    .fa-snapchat-ghost {
+                        background: #fffc00;
+                        color: white;
+                        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+                    }
+
+                    .fa-skype {
+                        background: #00aff0;
+                        color: white;
+                    }
+
+                    .fa-android {
+                        background: #a4c639;
+                        color: white;
+                    }
+
+                    .fa-dribbble {
+                        background: #ea4c89;
+                        color: white;
+                    }
+
+                    .fa-vimeo {
+                        background: #45bbff;
+                        color: white;
+                    }
+
+                    .fa-tumblr {
+                        background: #2c4762;
+                        color: white;
+                    }
+
+                    .fa-vine {
+                        background: #00b489;
+                        color: white;
+                    }
+
+                    .fa-foursquare {
+                        background: #45bbff;
+                        color: white;
+                    }
+
+                    .fa-stumbleupon {
+                        background: #eb4924;
+                        color: white;
+                    }
+
+                    .fa-flickr {
+                        background: #f40083;
+                        color: white;
+                    }
+
+                    .fa-yahoo {
+                        background: #430297;
+                        color: white;
+                    }
+
+                    .fa-soundcloud {
+                        background: #ff5500;
+                        color: white;
+                    }
+
+                    .fa-reddit {
+                        background: #ff5700;
+                        color: white;
+                    }
+
+                    .fa-rss {
+                        background: #ff6600;
+                        color: white;
+                    }
+
+                    .fa-blogger {
+                        background: #f57d00;
+                        color: white;
+                        background-image: architecture-asia-beautiful-433989.jpg;
+                    }
+                </style>
+            </head>
+            <body>
+
+                <h2>Follow Us</h2>
+
+                <!-- Add font awesome icons -->
+                <a href="https://www.facebook.com/ofr.app.31" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/app_ofr" class="fa fa-twitter"></a>
+                <a href="https://plus.google.com/u/2/" class="fa fa-google"></a>
+                <a href="https://www.linkedin.com/in/ofr-app-8b41b5159/" class="fa fa-linkedin"></a>
+                <a href="https://www.youtube.com/channel/UCvVQiLOk20h1VVvvNSPhqSg" class="fa fa-youtube"></a>
+                <a href="https://www.instagram.com/ofrapp01/" class="fa fa-instagram"></a>
+                <a href="https://in.pinterest.com/ofrapp0201/" class="fa fa-pinterest"></a>
+               
+
+            </body>
+            </html>
+
+
+            <hr />
+
+            <footer>
+
+                <p style="text-align: right">&copy; <%: DateTime.Now.Year %> - OFR INDIA</p>
+            </footer>
+        </div>
+
+    </form>
+</body>
+</html>
